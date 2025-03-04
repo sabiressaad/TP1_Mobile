@@ -8,74 +8,119 @@
 
     <TextView
         android:id="@+id/textViewTitle"
+        style="@style/HeaderText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigation"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp"
-        android:layout_alignParentTop="true"/>
+        android:text="Inscription à la Formation"
+        android:gravity="center"
+        android:layout_alignParentTop="true" />
 
-    <EditText
-        android:id="@+id/editTextNomPrenom"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nom &amp; Prénom"
-        android:inputType="textPersonName"
-        android:layout_marginTop="80dp"
-        android:layout_below="@id/textViewTitle" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewTitle"
+        android:layout_above="@id/buttonEnvoyer"
         android:layout_marginTop="16dp"
-        android:layout_below="@id/editTextNomPrenom" />
+        android:layout_marginBottom="16dp">
 
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone"
-        android:inputType="phone"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/editTextEmail" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextAdresse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Adresse"
-        android:inputType="textPostalAddress"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/editTextPhone" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom &amp; Prénom"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginBottom="4dp"
+                android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/textViewVille"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ville"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/editTextAdresse"
-        android:layout_marginEnd="8dp" />
+            <EditText
+                android:id="@+id/editTextNomPrenom"
+                style="@style/AppEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Entrez votre nom complet"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp" />
 
-    <Spinner
-        android:id="@+id/spinnerVille"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/textViewVille"
-        android:layout_alignTop="@id/textViewVille"
-        android:layout_marginLeft="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginBottom="4dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                style="@style/AppEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Entrez votre adresse email"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Téléphone"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginBottom="4dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                style="@style/AppEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Entrez votre numéro de téléphone"
+                android:inputType="phone"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginBottom="4dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextAdresse"
+                style="@style/AppEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Entrez votre adresse complète"
+                android:inputType="textPostalAddress"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/textViewVille"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ville"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginBottom="4dp"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spinnerVille"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/buttonEnvoyer"
-        android:layout_width="wrap_content"
+        style="@style/AppButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENVOYER"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/spinnerVille"
-        android:layout_marginTop="24dp" />
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
